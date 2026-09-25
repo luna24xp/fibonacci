@@ -3,10 +3,14 @@
 using namespace std;
 
 void selectionSort(int arr[], int n) {
+    int comparaciones = 0;
+    int intercambios = 0;
+
     for (int i = 0; i < n - 1; i++) {
         int min_idx = i;
         
         for (int j = i + 1; j < n; j++) {
+            comparaciones++; 
             if (arr[j] < arr[min_idx]) {
                 min_idx = j;
             }
@@ -16,6 +20,7 @@ void selectionSort(int arr[], int n) {
             int temp = arr[min_idx];
             arr[min_idx] = arr[i];
             arr[i] = temp;
+            intercambios++; 
         }
 
         cout << "Pasada " << i + 1 << ":" << endl << endl;
@@ -24,6 +29,9 @@ void selectionSort(int arr[], int n) {
         }
         cout << endl << endl;
     }
+
+    cout << "Comparaciones hechas: " << comparaciones << endl;
+    cout << "Intercambios hechos: " << intercambios << endl;
 }
 
 int main() {
