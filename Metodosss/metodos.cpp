@@ -69,10 +69,7 @@ int main() {
         original[i] = dis(gen);
     }
 
-    cout << "==================================================" << endl;
-    cout << "  COMPETENCIA DE ALGORITMOS DE ORDENAMIENTO (" << N << " elementos)" << endl;
-    cout << "==================================================" << endl << endl;
-
+    
     // Metodo de la burbuja
     vector<int> copiaBurbuja = original; 
 
@@ -112,7 +109,6 @@ int main() {
     cout << "   - Tiempo: " << tiempoSeleccion.count() << " microsegundos" << endl;
     cout << "   - Estado: " << (estaOrdenado(copiaSeleccion) ? " CORRECTAMENTE ORDENADO" : " ERROR EN ORDENAMIENTO") << endl << endl;
 
-    cout << "==================================================" << endl;
 
     return 0;
 }
